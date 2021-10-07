@@ -1,0 +1,39 @@
+<app-header></app-header>
+
+<section class="post-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="left-menu">
+                    <ul>
+                        <li><a routerLink="/post">Post</a></li>
+                        <li><a routerLink="/photoalbums">Albums</a></li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <div class="col-md-9">
+                <div class="right-post-box">
+                    <div class="row">
+                        <div class="col-md-4 mb-3" *ngFor="let photo of products">
+                            <div class="post-box">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <p><b>albumId:</b> {{photo.albumId}}</p>
+                                        <p><b>id:</b> {{photo.id}}</p>
+                                        <p><b>title:</b> {{photo.title}}</p>
+                                        <img src="{{photo.url}}" class="w-100 mb-3">
+                                        <img src="{{photo.thumbnailUrl}}" class="w-100">                             
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<app-footer></app-footer>
